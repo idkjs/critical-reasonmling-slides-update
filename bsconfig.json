@@ -1,0 +1,26 @@
+{
+  "name": "critical-reasonmling",
+  "bsc-flags": [ "-bs-no-version-header", "-bs-super-errors" ],
+  "sources": [
+    {
+      "dir": "src",
+      "subdirs": [
+        {
+          "dir": "spectacle"
+        },
+        {
+          "dir": "slides"
+        }
+      ]
+    }
+  ],
+  "package-specs": {
+    "module": "commonjs",
+    "in-source": true
+  },
+  "suffix": ".bs.js",
+  "bs-dependencies": [ "reason-react", "bs-webapi", "@glennsl/bs-jest" ],
+  "reason": {
+    "react-jsx": 3
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "critical-reasonmling",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "bs-webapi": "^0.19.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-typist": "^2.0.5",
+    "reason-react-compat": "^2.0.0",
+    "reason-react-update": "^2.0.0",
+    "reason-scripts": "1.0.0",
+    "spectacle": "^8.2.0",
+    "spectacle-code-slide": "^0.5.2",
+    "spectacle-terminal": "^0.5.0"
+  },
+  "scripts": {
+    "clean-lib": "rm -rf lib",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "postinstall": "esy",
+    "watch": "nodemon --delay '100ms' --watch src/ -e re --exec './build.sh'",
+    "clean": "esy bsb -clean-world",
+    "test": "jest",
+    "format": "find . -iname '*.re' | grep -v node_modules | grep -v _build | grep -v _esy | grep -v .melange.eobjs  | xargs bsrefmt --in-place && find . -iname '*.rei' | xargs bsrefmt -i true --in-place"
+  },
+  "devDependencies": {
+    "esbuild": "^0.12.5",
+    "@glennsl/bs-jest": "^0.7.0",
+    "reason-react": "0.9.1",
+    "nodemon": "*",
+    "esy": "*"
+  }
+}
